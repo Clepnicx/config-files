@@ -1,0 +1,66 @@
+{
+    "comments": {
+      	"lineComment": "%"
+    },
+    "brackets": [
+		["{", "}"],
+		["[", "]"],
+		["(", ")"],
+		["\\left(", "\\right)"],
+		["\\left(", "\\right."],
+		["\\left.", "\\right)"],
+		["\\left[", "\\right]"],
+		["\\left[", "\\right."],
+		["\\left.", "\\right]"],
+		["\\left\\{", "\\right\\}"],
+		["\\left\\{", "\\right."],
+		["\\left.", "\\right\\}"],
+		["\\left<", "\\right>"]
+	],
+	"autoClosingPairs": [
+		["\\bigl(", "\\bigr)"],
+		["\\bigl[", "\\bigr]"],
+		["\\bigl{", "\\bigr}"],
+		["\\Bigl(", "\\Bigr)"],
+		["\\Bigl[", "\\Bigr]"],
+		["\\Bigl{", "\\Bigr}"],
+		["\\biggl(", "\\biggr)"],
+		["\\biggl[", "\\biggr]"],
+		["\\biggl{", "\\biggr}"],
+		["\\Biggl(", "\\Biggr)"],
+		["\\Biggl[", "\\Biggr]"],
+		["\\Biggl{", "\\Biggr}"],
+		["\\(", "\\)"],
+		["\\[", "\\]"],
+		["\\{", "\\}"],
+		["\\left(", "\\right)"],
+		["\\left[", "\\right]"],
+		["\\left{", "\\right}"],
+		["{", "}"],
+		["[", "]"],
+		["(", ")"],
+		["`", "'"]
+	],
+	"surroundingPairs": [
+		["{", "}"],
+		["[", "]"],
+		["(", ")"],
+		["\"", "\""],
+		["'", "'"],
+		["`", "'"],
+		["$", "$"]
+    ],
+    "indentationRules": {
+		"increaseIndentPattern": "\\\\begin{(?!document)([^}]*)}(?!.*\\\\end{\\1})",
+		"decreaseIndentPattern": "^\\s*\\\\end{(?!document)"
+	},
+	"autoCloseBefore": ";:.,=}])>\\` \n\t$",
+	"wordPattern": "(__)|(\\*\\*)|(@.)|(\\.\\.\\.)|([^\\s`'\"~_!?|$#@%^&*\\-=+;:,.<>(){}[\\]\\\\\\/]{2,})",
+	"folding": {
+		"offSide": "true",
+		"markers": {
+			"start": "^\\s*%#Region\\b",
+			"end": "^\\s*%#Endregion\\b"
+		}
+	}
+}

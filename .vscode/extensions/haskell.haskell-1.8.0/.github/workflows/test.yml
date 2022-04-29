@@ -1,0 +1,43 @@
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [macos-11, ubuntu-latest, windows-latest]
+        ghc: [9.0.1]
+        include:
+          # To test a ghc version deprecated in newer hls versions
+          - os: ubuntu-latest
+            ghc: 8.10.4
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: Ensure there is a supported ghc versions
+        uses: haskell/actions/setup@v1
+        with:
+          ghc-version: ${{ matrix.ghc }}
+      - run: npm ci
+      - run: npm run webpack
+      - run: xvfb-run -s '-screen 0 640x480x16' -a npm test
+        if: runner.os == 'Linux'
+      - run: npm test
+        if: runner.os != 'Linux'
+      - name: Upload log file to workflow artifacts on error
+        if: failure()
+        uses: actions/upload-artifact@v2
+        with:
+          name: extension-${{ matrix.os }}.log
+          path: test-workspace/hls.log
+
