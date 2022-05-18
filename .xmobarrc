@@ -21,8 +21,9 @@ Config {
                  , Run Com "uname" ["-s","-r"] "" 36000
                  , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
                  , Run StdinReader
+                 , Run Locks
                  ]
     , sepChar = "%"
     , alignSep = "}{"
-    , template = "%StdinReader%}{%cpu% | %memory% | %eth0% - %eth1% | <fc=#ee9a00>%date%</fc>"
+    , template = "%StdinReader%}{<fc=rec>%locks%</fc> | %cpu% | %memory% | %eth0% - %eth1% | <fc=#ee9a00>%date%</fc>"
     }
