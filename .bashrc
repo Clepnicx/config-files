@@ -58,12 +58,13 @@ command_prompt () {
     local TIME="$(date +'%-I':%M:%S%P)"
     local CPU="$(cpu)%"
     local JOBS="\j"
+    local ICON="λ"
 
     ## Display a happy smiley if the exitcode is 0, else display a shocked smiley
     if [[ $LAST_COMMAND != 0 ]]; then
-        local FACE="\[${RED}\]D:"
+        local SYMBOL="\[${RED}\]\[${ICON}\]"
     else
-        local FACE="\[${SALMON}\](:"
+        local SYMBOL="\[${SALMON}\]\[${ICON}\]"
     fi
 
     ##
@@ -74,7 +75,7 @@ command_prompt () {
 
     ## Right side of the prompt
     # Status of the exitcode (Smiley) + Day + Time
-    local RIGHT_SIDE="\[${LIGHTGRAY}\](${FACE}\[${LIGHTGRAY}\])-(\[${BLUE}\]${DAY} ${DATE} \[${PURPLE}\]${TIME}\[${LIGHTGRAY}\])"
+    local RIGHT_SIDE="\[${LIGHTGRAY}\](${SYMBOL}\[${LIGHTGRAY}\])-(\[${BLUE}\]${DAY} ${DATE} \[${PURPLE}\]${TIME}\[${LIGHTGRAY}\])"
 
     # Save curser position, move curser to the right side, print Right_Side and restore curser position.
     PS1="\[$(tput sc; printf "%*s" $(($COLUMNS+92)) "${RIGHT_SIDE}"; tput rc)\]"
