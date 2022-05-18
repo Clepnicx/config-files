@@ -111,9 +111,9 @@ export PATH="${PATH}:/home/clepnicx/.local/bin"
 ## ALIASES               ##
 ###########################
 
-alias zshconf="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias kittyconf="vim ~/.config/kitty/kitty.conf"
+alias zshconf="micro ~/.zshrc"
+alias ohmyzsh="micro ~/.oh-my-zsh"
+alias kittyconf="micro ~/.config/kitty/kitty.conf"
 
 
 ###########################
