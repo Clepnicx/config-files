@@ -78,7 +78,7 @@ command_prompt () {
     local RIGHT_SIDE="\[${LIGHTGRAY}\](${SYMBOL}\[${LIGHTGRAY}\])-(\[${BLUE}\]${DAY} ${DATE} \[${PURPLE}\]${TIME}\[${LIGHTGRAY}\])"
 
     # Save curser position, move curser to the right side, print Right_Side and restore curser position.
-    PS1="\[$(tput sc; printf "%*s" $(($COLUMNS+92)) "${RIGHT_SIDE}"; tput rc)\]"
+    PS1="\[$(tput sc; printf "%*s" $(($COLUMNS+97)) "${RIGHT_SIDE}"; tput rc)\]"
 
     ## Left side of the prompt
     # User + Hostname
