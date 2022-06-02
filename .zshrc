@@ -120,5 +120,6 @@ alias kittyconf="micro ~/.config/kitty/kitty.conf"
 ## SPACESHIP CONFIG      ##
 ###########################
 
-SPACESHIP_CHAR_SYMBOL="  "
-SPACESHIP_CHAR_COLOR_SUCCESS="#ff8c00"
+SPACESHIP_CHAR_SYMBOL="λ "
+SPACESHIP_DIR_COLOR="#ff8700"
+SPACESHIP_CHAR_COLOR_SUCCESS="#9526fd"
