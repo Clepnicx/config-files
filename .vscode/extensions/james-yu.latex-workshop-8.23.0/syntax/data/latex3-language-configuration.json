@@ -1,7 +1,0 @@
-{
-	"extends": "../latex-language-configuration.json",
-
-	"overrides": {
-		"wordPattern": "(__)|(\\*\\*)|(\\.\\.\\.)|([^\\s`'\"~_!?|$#@%^&*\\-=+;:,.<>(){}[\\]\\\\\\/]{2,})"
-	}
-}
