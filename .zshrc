@@ -15,3 +15,8 @@ export PATH="${PATH}:/home/clepnicx/.local/bin"
 
 alias zshconf="vim ~/.zshrc"
 alias kittyconf="vim ~/.config/kitty/kitty.conf"
+
+##############
+## PROMPT   ##
+##############
+eval "$(starship init zsh)"
