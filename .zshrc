@@ -6,6 +6,7 @@
 ## EXPORTS                ##
 ############################
 
+export HISTSIZE=20000
 export PATH="${PATH}:/home/clepnicx/.local/bin"
 
 
