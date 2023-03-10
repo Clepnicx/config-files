@@ -10,8 +10,8 @@
 ############################
 
 alias ls='ls --color=auto'
-alias bashconf="vim ~/.bashrc"
-alias kittyconf="vim ~/.config/kitty/kitty.conf"
+alias bashconf="micro ~/.bashrc"
+alias kittyconf="micro ~/.config/kitty/kitty.conf"
 
 ############################
 ## EXPORTS                ##
