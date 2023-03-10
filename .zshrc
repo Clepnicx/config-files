@@ -14,6 +14,7 @@ export PATH="${PATH}:/home/clepnicx/.local/bin"
 ## ALIASES               ##
 ###########################
 
+alias ls='ls --color=auto'
 alias zshconf="micro ~/.zshrc"
 alias kittyconf="micro ~/.config/kitty/kitty.conf"
 
