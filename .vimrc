@@ -41,6 +41,9 @@ filetype indent on
 " Turn syntax highlighting on.
 syntax on
 
+" Set colorscheme
+colorscheme molokai
+
 " }}}
 
 " PLUGINS ---------------------------------------------------------------- {{{
